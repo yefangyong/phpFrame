@@ -21,5 +21,7 @@ if(DEBUG) {
 include CORE.'/common/function.php';
 
 include CORE.'/imooc.php';
+//自动注册类，找不到类库，自动调用方法
+spl_autoload_register('\core\imooc::load');
 
 \core\imooc::run();
