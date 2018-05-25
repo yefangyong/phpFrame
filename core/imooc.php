@@ -9,12 +9,24 @@
 namespace core;
 
 
+use core\lib\route;
+
 class imooc
 {
     public static $classMap = array();
     static public function run() {
-       p('ok');
-        new lib\route();
+       $route = new route();
+        $controller = $route->controller;
+        $method = $route->method;
+        $controllerFile = APP.'/controller/'.$controller.'Controller.php';
+        $controllerClass = '\\'.MODULE.'\controller\\'.$controller.'Controller';
+        if(is_file($controllerFile)) {
+            include $controllerFile;
+            $ctrl = new $controllerClass();
+            $ctrl->$method();
+        }else{
+            throw new \Exception($controller.'controller'.'不存在');
+        }
     }
 
     /**
@@ -32,7 +44,7 @@ class imooc
                 include $file;
                 self::$classMap[$class] = $class;
             }else{
-                return false;
+                throw new \Exception($class.'类库不存在');
             }
         }
     }

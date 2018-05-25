@@ -37,7 +37,6 @@ class route
                }
                $i = $i + 2;
            }
-           p($_GET);
        }else{
            $this->controller = 'index';
            $this->method = 'index';
