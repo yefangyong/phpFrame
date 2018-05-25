@@ -14,7 +14,7 @@ class imooc
     public static $classMap = array();
     static public function run() {
        p('ok');
-        new \core\route();
+        new lib\route();
     }
 
     /**
