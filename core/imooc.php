@@ -14,6 +14,9 @@ use core\lib\route;
 class imooc
 {
     public static $classMap = array();
+
+    public $assign = array();
+
     static public function run() {
        $route = new route();
         $controller = $route->controller;
@@ -46,6 +49,20 @@ class imooc
             }else{
                 throw new \Exception($class.'类库不存在');
             }
+        }
+    }
+
+    public function assign($key,$value) {
+        $this->assign[$key] = $value;
+    }
+
+    public function display($file) {
+        $file = APP.'/views/'.$file;
+        if(is_file($file)) {
+            extract($this->assign);
+            include $file;
+        }else {
+            throw new \Exception($file.'视图文件不存在');
         }
     }
 }
