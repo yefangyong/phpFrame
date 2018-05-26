@@ -57,10 +57,15 @@ class imooc
     }
 
     public function display($file) {
-        $file = APP.'/views/'.$file;
-        if(is_file($file)) {
-            extract($this->assign);
-            include $file;
+        $file_has = APP.'/views/'.$file;
+        if(is_file($file_has)) {
+            \Twig_Autoloader::register();
+            $loader = new \Twig_Loader_Filesystem(APP.'/views');
+            $twig = new \Twig_Environment($loader, array(
+                'cache' => IMOOC.'/log/cache',
+            ));
+            $template = $twig->loadTemplate($file);
+            $template->display($this->assign?$this->assign:'');
         }else {
             throw new \Exception($file.'视图文件不存在');
         }

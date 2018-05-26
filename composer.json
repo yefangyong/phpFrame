@@ -8,6 +8,8 @@
   "require": {
     "php": ">= 5.5.3",
     "filp/whoops":"*",
-    "symfony/var-dumper":"*"
+    "symfony/var-dumper":"*",
+    "catfan/medoo":"*",
+    "twig/twig":"*"
   }
 }
