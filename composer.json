@@ -1,0 +1,13 @@
+{
+  "name":"IMOOC_PHP",
+  "description":"this is a php framework",
+  "type":"Framework",
+  "keywords":[
+    "PHP","PHP Framework"
+  ],
+  "require": {
+    "php": ">= 5.5.3",
+    "filp/whoops":"*",
+    "symfony/var-dumper":"*"
+  }
+}

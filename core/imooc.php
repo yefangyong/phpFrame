@@ -18,7 +18,7 @@ class imooc
     public $assign = array();
 
     static public function run() {
-       $route = new route();
+        $route = new route();
         $controller = $route->controller;
         $method = $route->method;
         $controllerFile = APP.'/controller/'.$controller.'Controller.php';
