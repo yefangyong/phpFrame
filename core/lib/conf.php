@@ -32,9 +32,9 @@ class conf
             $path = IMOOC.'/core/conf/'.$file.'.php';
             if(is_file($path)) {
                 $conf = include $path;
-                if(isset($conf[$file][$name])){
+                if(isset($conf[$name])){
                     self::$confMap[$file] = $conf;
-                    return $conf[$file][$name];
+                    return $conf[$name];
                 }else{
                     throw new \Exception('配置项不存在'.$name);
                 }
