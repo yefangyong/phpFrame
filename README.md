@@ -23,3 +23,7 @@
       ---vendor-------------------------第三方核心文件类库</br>
       ---composer.json------------------composer配置文件</br>
       ---index.php----------------------入口文件
+
+
+#### 小结
+> 通过几天的学习，编写了路由类，模型类，视图类，使用composer引入了第三方的类库如优雅的PHP调试库filp/whoops，symfony/var-dumper，容易使用的数据库类catfan/medoo，模板引擎twig/twig，搭建出一个五脏俱全的PHP框架，使得对框架运行流程有了更深一步的了解。
