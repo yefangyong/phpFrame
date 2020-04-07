@@ -31,6 +31,7 @@ class ComposerStaticInitfdf21af30bff9921fc414991a51e1ac5
         ),
         'M' => 
         array (
+            'Monolog\\' => 8,
             'Medoo\\' => 6,
         ),
     );
@@ -55,6 +56,10 @@ class ComposerStaticInitfdf21af30bff9921fc414991a51e1ac5
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
+        'Monolog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
         'Medoo\\' => 
         array (

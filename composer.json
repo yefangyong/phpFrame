@@ -1,7 +1,6 @@
 {
   "name":"IMOOC_PHP",
   "description":"this is a php framework",
-  "type":"Framework",
   "keywords":[
     "PHP","PHP Framework"
   ],
@@ -10,6 +9,7 @@
     "filp/whoops":"*",
     "symfony/var-dumper":"*",
     "catfan/medoo":"*",
-    "twig/twig":"*"
+    "twig/twig":"*",
+    "monolog/monolog": "^1.25"
   }
 }
