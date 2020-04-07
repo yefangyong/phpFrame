@@ -12,7 +12,7 @@ define("APP",IMOOC."/app");
 define('MODULE','app');
 define("DEBUG",true);
 
-include '/vendor/autoload.php';
+include './vendor/autoload.php';
 if(DEBUG) {
     $whoops = new \Whoops\Run;
     $options = new \Whoops\Handler\PrettyPageHandler();
